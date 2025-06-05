@@ -23,7 +23,7 @@ auth = smartsheet_to_dataframe(st.secrets['smartsheet']['sheet_id']['authenticat
 auth = auth.dropna()
 auth = auth.Key.values[0]
 
-if st.query_params.auth != auth:
+if st.query_params.auth is not None and st.query_params.auth != auth:
     st.warning('It appears you are using an expired archive link. Please refer to the **most recent newsletter** for the current link.')
 
 else:
