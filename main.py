@@ -34,6 +34,6 @@ for category, tab in zip(categories, tabs):
 
         def produce_iframes(row):
             with st.expander(label=f"{row['Title']}"):
-                components.iframe(src=row['URL'], height=350, scrolling=True)
+                components.iframe(src=row['URL'], height=360, scrolling=True)
         
         category_df.apply(produce_iframes, axis=1)
