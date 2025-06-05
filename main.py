@@ -25,7 +25,7 @@ auth = auth.Key.values[0]
 
 key  = st.query_params.get('auth')
 
-if key is None or st.query_params.auth != auth:
+if key is None or key != auth:
     st.warning('It appears you are using an expired archive link. Please refer to the **most recent newsletter** for the current link.')
 
 else:
