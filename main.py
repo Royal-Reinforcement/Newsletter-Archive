@@ -14,7 +14,7 @@ def smartsheet_to_dataframe(sheet_id):
     return pd.DataFrame(rows, columns=columns)
 
 
-st.set_page_config(page_title='RD | Newsletter Archive', page_icon='📬', layout='wide')
+st.set_page_config(page_title='Newsletter Archive | RD', page_icon='📬', layout='wide')
 
 st.image(st.secrets["logo"], width=100)
 
